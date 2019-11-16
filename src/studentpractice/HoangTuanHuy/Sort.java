@@ -136,6 +136,7 @@ public class Sort
 		B.merge_sort(1, B.n);
 		B.out("data/Sorting.out", "Merge Sort:");
 		//System.out.print(1+"\n"+2);
+		//System.out.print(1+"\n"+2);
 
 	}
 }
