@@ -35,6 +35,7 @@ public class Dijkstra
 		Scanner scan = new Scanner(file);
 		n=scan.nextInt();
 		m=scan.nextInt();
+		for(int i=1;i<=n;i++) X[i]= new ArrayList <>();
 		for(int i=1;i<=m;i++)
 		{
 			int u,v;
