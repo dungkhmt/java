@@ -7,7 +7,7 @@ public class Dijkstra
 {
 	/// O((n+m)log2(m))
 	/// Use heap-sort technic =  priority_queue.
-	/// Can use priority_queue to find MST with Prim algorith
+	/// Can use priority_queue to find MST with Prim algorithm
 	/// unDirected graph = Directed graph 
 	private int n,m,S,F;
 	class pair implements Comparable<pair>

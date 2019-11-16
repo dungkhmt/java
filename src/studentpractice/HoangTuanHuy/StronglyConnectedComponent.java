@@ -8,7 +8,7 @@ public class StronglyConnectedComponent
 	// Finding Strongly Connected Component with Tarjan type
 	private int n,m; /// n : the number of nodes ,  m : the number of edges
 	/// Directed graph version 
-	/// Need an parent for unDirected graph 
+	/// Need a parent for unDirected graph 
 	
 	private ArrayList<Integer>[] X = new ArrayList[1001]; // Edges list
 	private int[] begin_topo = new int[1001];
