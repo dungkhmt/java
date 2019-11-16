@@ -53,16 +53,13 @@ public class Sort {
         int swapped;
         do {
             swapped = 0;
-            for (int i = 0; i < a.length; i++) {
+            for (int i = 0; i < a.length-1; i++) {
                 if (a[i] > a[i+1]) {
-                    int tmp = a[i];
-                    a[i] = a[i+1];
-                    a[i+1] = tmp;
+                    swap(i, i+1);
                     swapped = 1;
                 }
             }
         } while (swapped == 1);
-        print();
     }
     public void swap(int i, int j) {
         int tmp = a[i];
