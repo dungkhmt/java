@@ -1,3 +1,5 @@
+package studentpractice.trantanminh;
+
 import java.io.File;
 import java.util.Scanner;
 
