@@ -34,7 +34,7 @@ public class Sort {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Sort app = new Sort();
-		app.inputData("data/dayso.txt");
+		app.inputData("data/dayso1.txt");
 		app.print();
 	}
 
