@@ -3,7 +3,6 @@ public class Rectangle {
 	private int length;
 	private int width;
 	private int area;
-	private Rectangle sub = new Rectangle();
 	
 	public Rectangle() {
 		length = 0;
