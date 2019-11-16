@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Sort {
     private int[] a;
 
+    /* Input data from a text file */
     public void inputData(String filename) {
         try {
             Scanner in = new Scanner(new File(filename));
@@ -19,12 +20,23 @@ public class Sort {
             e.printStackTrace();
         }
     }
+
+    /* Print the ordered array*/
     public void print() {
         System.out.println("Your ordered array is: ");
         for (int i = 0; i < a.length; i++) {
             System.out.println(a[i]);
         }
     }
+
+    /* Swap two elements in the array using its index*/
+    public void swap(int i, int j) {
+        int tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+    }
+
+    /* Arrange the array using selection sort algorithm*/
     public void selectionSort() {
         for (int i = 0; i < a.length; i++) {
             int min = i;
@@ -35,8 +47,9 @@ public class Sort {
             a[min] = a[i];
             a[i] = tmp;
         }
-        print();
     }
+
+    /* Arrange the array using insertion sort algorithm*/
     public void insertionSort() {
         for (int i = 1; i < a.length; i++) {
             int last = a[i];
@@ -47,8 +60,9 @@ public class Sort {
             }
             a[j] = last;
         }
-        print();
     }
+
+    /* Arrange the array using bubble sort algorithm*/
     public void bubbleSort() {
         int swapped;
         do {
@@ -60,11 +74,6 @@ public class Sort {
                 }
             }
         } while (swapped == 1);
-    }
-    public void swap(int i, int j) {
-        int tmp = a[i];
-        a[i] = a[j];
-        a[j] = tmp;
     }
     public  int partition(int L, int R) {
         int pivot = a[R];
@@ -78,6 +87,8 @@ public class Sort {
         swap(i+1, R);
         return i+1;
     }
+
+    /* Arrange the array using quick sort algorithm*/
     public void quickSort(int L, int R) {
         if (L < R) {
             int pi = partition(L, R);       /* pi is partitioning index, a[pi] is now at right place*/
@@ -86,38 +97,43 @@ public class Sort {
             quickSort(pi+1, R);
         }
     }
-	public void buildHeap(int n) {
-		for (int i = n/2 - 1; i >= 0; i--) {
-			heapify(i, n);
-		}
-	}
-	public void heapify(int i, int n) {
-		int L = 2*i+1;
-		int R = 2*i+2;
-		int max = i;
-		if (L < n && a[L] > a[max])
-			max = L;
-		if (R < n && a[R] > a[max])
-			max = R;
-		if (i != max) {
-			swap(i, max);
-			heapify(max, n);
-		}
-	}
-	public void heapSort(int n) {
-		buildHeap(n);
-		for (int i = n-1; i >= 0; i--) {
-			swap(0, i);
-			heapify(0, i);
-		}
-	}
+
+    /* Arrange the array using heap sort algorithm*/
+    public void heapSort(int n) {
+        buildHeap(n);
+        for (int i = n-1; i >= 0; i--) {
+            swap(0, i);
+            heapify(0, i);
+        }
+    }
+    public void heapify(int i, int n) {
+        int L = 2*i+1;
+        int R = 2*i+2;
+        int max = i;
+        if (L < n && a[L] > a[max])
+            max = L;
+        if (R < n && a[R] > a[max])
+            max = R;
+        if (max != i) {
+            swap(i, max);
+            heapify(max, n);
+        }
+    }
+    public void buildHeap(int n) {
+        for (int i = n/2-1; i >= 0; i--) {
+            heapify(i, n);
+        }
+    }
+
+    /* Main function*/
     public static void main(String[] args) {
         Sort app = new Sort();
-        app.inputData("data/dayso.txt");
-		app.heapSort(5);
+        app.inputData("JavaLaboratoryProject/java/data/dayso.txt");
+        app.heapSort(10);
         app.print();
     }
 }
+
 
 
 
