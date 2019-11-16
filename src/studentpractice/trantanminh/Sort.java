@@ -86,10 +86,35 @@ public class Sort {
             quickSort(pi+1, R);
         }
     }
+	public void buildHeap(int n) {
+		for (int i = n/2 - 1; i >= 0; i--) {
+			heapify(i, n);
+		}
+	}
+	public void heapify(int i, int n) {
+		int L = 2*i+1;
+		int R = 2*i+2;
+		int max = i;
+		if (L < n && a[L] > a[max])
+			max = L;
+		if (R < n && a[R] > a[max])
+			max = R;
+		if (i != max) {
+			swap(i, max);
+			heapify(max, n);
+		}
+	}
+	public void heapSort(int n) {
+		buildHeap(n);
+		for (int i = n-1; i >= 0; i--) {
+			swap(0, i);
+			heapify(0, i);
+		}
+	}
     public static void main(String[] args) {
         Sort app = new Sort();
         app.inputData("data/dayso.txt");
-        app.quickSort(0, 4);
+		app.heapSort(5);
         app.print();
     }
 }
