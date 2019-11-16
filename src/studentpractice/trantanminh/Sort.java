@@ -114,7 +114,7 @@ public class Sort {
     public static void main(String[] args) {
         Sort app = new Sort();
         app.inputData("data/dayso.txt");
-		app.heapSort(5);
+		app.heapSort(6);
         app.print();
     }
 }
