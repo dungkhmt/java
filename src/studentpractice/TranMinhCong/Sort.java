@@ -53,7 +53,7 @@ public class Sort {
 		Sort app = new Sort();
 		app.inputData("data/dayso.txt");
 		app.quickSort(0,app.a.length - 1);
-		app.print();
+		//app.print();
 		
 	}
 }
