@@ -91,7 +91,7 @@ public class Sort {
     }
     public static void main(String[] args) {
         Sort app = new Sort();
-        app.inputData("JavaLaboratoryProject/java/data/dayso.txt");
+        app.inputData("data/dayso.txt");
         app.quickSort(0, 4);
         app.print();
     }
