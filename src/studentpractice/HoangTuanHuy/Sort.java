@@ -35,7 +35,7 @@ public class Sort
 		my_print.println(sorting_type);
 		//my_print.println(n);
 		for(int i=1;i<=n;i++) my_print.print(a[i]+" ");
-		my_print.close();
+		//my_print.close();
 	}
 	private void swap(int i,int j)
 	{
@@ -67,37 +67,21 @@ public class Sort
 	{
 		int i=l,j=mid+1;
 		int cnt=0;
-		while(i<=mid)
+		while(i<=mid && j<=r )
 		{
-			if(j<=r && a[i]>=a[j])
-			{
-				cnt++;
-				ex[cnt]=a[j];
-				j++;
-				continue;
-			}
-			if(j<=r && a[i]<=a[j])
-			{
-				cnt++;
-				ex[cnt]=a[i];
-				i++;
-			}
-		}
-		while(j<=r)
-		{
-			if(i<=mid && a[i]<=a[j])
-			{
-				cnt++;
-				ex[cnt]=a[i];
-				i++;
-				continue;
-			}
-			if(j<=r && a[j]<=a[i])
+			if(a[i]>=a[j])
 			{
 				cnt++;
 				ex[cnt]=a[j];
 				j++;
 			}
+			else
+			{
+				cnt++;
+				ex[cnt]=a[i];
+				i++;
+			}
+
 		}
 		while(i<=mid)
 		{
@@ -128,13 +112,12 @@ public class Sort
 	{
 		// TODO Auto-generated method stub
 		Sort A = new Sort();
-		Sort B = new Sort();
-		A.inp("data/Sorting.inp");
-		B=A;
-		A.quick_sort(1, A.n);
-		A.out("data/Sorting.out","Quick Sort:");
-		B.merge_sort(1, B.n);
-		B.out("data/Sorting.out", "Merge Sort:");
+		A.inp("data/HTHSorting.inp");
+		//A.quick_sort(1, A.n);
+		A.merge_sort(1, A.n);
+		//A.out("data/HTHSorting.out","Quick Sort:");
+		//B.merge_sort(1, B.n);
+		//A.out("data/HTHSorting.out", "Merge Sort:");
 		//System.out.print(1+"\n"+2);
 		//System.out.print(1+"\n"+2);
 
