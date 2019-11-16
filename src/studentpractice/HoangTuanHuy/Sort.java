@@ -9,6 +9,7 @@ public class Sort
 {
 
 	private int[] a = new int[1001];
+	private int[] ex = new int[1001];
 	private int n;
 	public void inp(String filename) throws IOException
 	{
@@ -27,11 +28,12 @@ public class Sort
 		scan.close();
 		
 	}
-	public void out(String filename) throws IOException
+	public void out(String filename,String sorting_type) throws IOException
 	{
 		File file = new File(filename);
 		PrintStream my_print = new PrintStream(filename);
-		my_print.println(n);
+		my_print.println(sorting_type);
+		//my_print.println(n);
 		for(int i=1;i<=n;i++) my_print.print(a[i]+" ");
 		my_print.close();
 	}
@@ -61,15 +63,66 @@ public class Sort
 		if (index<r) quick_sort(index+1,r);
 	
 	}
+	private void merge_A_B(int l,int mid,int r)
+	{
+		int i=l,j=mid+1;
+		int cnt=0;
+		while(i<=mid)
+		{
+			if(j<=r && a[i]>=a[j])
+			{
+				cnt++;
+				ex[cnt]=a[j];
+				j++;
+				continue;
+			}
+			if(j<=r && a[i]<=a[j])
+			{
+				cnt++;
+				ex[cnt]=a[i];
+				i++;
+			}
+		}
+		while(j<=r)
+		{
+			if(i<=mid && a[i]<=a[j])
+			{
+				cnt++;
+				ex[cnt]=a[i];
+				i++;
+				continue;
+			}
+			if(j<=r && a[j]<=a[i])
+			{
+				cnt++;
+				ex[cnt]=a[j];
+				j++;
+			}
+		}
+		while(i<=mid)
+		{
+			cnt++;
+			ex[cnt]=a[i];
+			i++;
+		}
+		while(j<=r)
+		{
+			cnt++;
+			ex[cnt]=a[j];
+			j++;
+		}
+		for(int z=1;z<=cnt;z++)
+		{
+			a[l+z-1]=ex[z];
+		}
+	}
 	public void merge_sort(int l,int r)
 	{
 		if(l>=r) return ;
 		int mid=(l+r)/2;
 		merge_sort(l,mid);
 		merge_sort(mid+1,r);
-		
-		
-		
+		merge_A_B(l,mid,r);		
 	}
 	public static void main(String[] args) throws IOException
 	{
@@ -79,7 +132,9 @@ public class Sort
 		A.inp("data/Sorting.inp");
 		B=A;
 		A.quick_sort(1, A.n);
-		A.out("data/Sorting.out"); 
+		A.out("data/Sorting.out","Quick Sort:");
+		B.merge_sort(1, B.n);
+		B.out("data/Sorting.out", "Merge Sort:");
 		//System.out.print(1+"\n"+2);
 
 	}
