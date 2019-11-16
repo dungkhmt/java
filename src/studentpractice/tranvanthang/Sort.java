@@ -73,7 +73,7 @@ public class Sort {
 
 	public static void main(String[] args) {
 		Sort a = new Sort();
-		a.inputData("data/dayso.txt");
+		a.inputData("src/studentpractice/tranvanthang/dayso.txt");
 		a.print();
 		Sort b=a;
 
