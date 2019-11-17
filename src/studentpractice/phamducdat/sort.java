@@ -30,7 +30,7 @@ public class sort {
 		swapped =0;
 		do{
 			swapped = 0;
-			for( int i = 0; i < a.length; i++){
+			for( int i = 0; i < a.length-1; i++){
 				if( a[i] > a[i+1]){
 					int tmp = a[i];
 					a[i] = a[i+1];
