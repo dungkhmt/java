@@ -6,7 +6,7 @@ public class DFS
 	// O(n+m);
 	private int n,m; /// n : the number of nodes ,  m : the number of edges
 	
-	private ArrayList<Integer>[] X = new ArrayList[1001]; // Edges list
+	private ArrayList<Integer>[] X = new ArrayList[1001]; // Ajacent nodes list
 	private int[] dd = new int[1001]; //ticked node.
 	private int[] p = new int[1001]; // Parent of u
 	private int[] begin_topo = new int[1001];
