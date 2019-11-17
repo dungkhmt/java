@@ -27,6 +27,7 @@ public class sort {
 	
 	public void bubleSort(){
 		int swapped;
+		swapped =0;
 		do{
 			swapped = 0;
 			for( int i = 0; i < a.length; i++){
@@ -34,7 +35,7 @@ public class sort {
 					int tmp = a[i];
 					a[i] = a[i+1];
 					a[i+1] = tmp;
-					swapped =1;
+					swapped = 1;
 				}
 			}
 		}while( swapped == 1);
@@ -74,8 +75,8 @@ public class sort {
           ///app.print();
           //app.bubleSort();
           //System.out.print("bubleSort: ");
-          //app.bubleSort();
-          app.insertionSort();
+          app.bubleSort();
+          //app.insertionSort();
           app.print();
 	}
 
