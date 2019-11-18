@@ -10,7 +10,7 @@ public class MinimumSpanningTree_Kruskal
 	private long MST;
 	private int[] p = new int[1001]; // The representative node
 	private int[] h = new int[1001]; // the height of tree
-	class pair implements Comparable<pair> /// fi = distance between u and v ,(u,v) is an edges
+	class pair implements Comparable<pair> /// fi = distance between u and v ,(u,v) is an edge
 	{ 
 		long fi;
 		int U,V;
@@ -44,7 +44,7 @@ public class MinimumSpanningTree_Kruskal
 			z=scan.nextLong();
 			Edges.add(new pair(z,u,v));
 		}
-		scan.close();
+		scan.close();	
 	}
 	public void out(String filename) throws IOException
 	{

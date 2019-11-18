@@ -3,7 +3,7 @@ package studentpractice.NguyenPhiTruong;
 import java.io.File;
 import java.util.Scanner;
 
-public class sort {
+public class sort extends QuickSort {
 	public static int[] a;
 
 	public void inputData(String filename) {
@@ -65,16 +65,17 @@ public class sort {
 		return storeIndex;
 	}
 
-	public void quicksort(int[] a, int L, int R) {
-		if (L < R) {
-			int index = (L + R) / 2;
-			index = partition(a, L, R, index);
-			if (L < index)
-				quicksort(a, L, index - 1);
-			if (index < R)
-				quicksort(a, index + 1, R);
-		}
-	}
+//	public void quicksort(int[] a, int L, int R) {
+//		if (L < R) {
+//			int index = (L + R) / 2;
+//			index = partition(a, L, R, index);
+//			if (L < index)
+//				quicksort(a, L, index - 1);
+//			if (index < R)
+//				quicksort(a, index + 1, R);
+//		}
+//		System.out.print("-");
+//	}
 
 	public void print() {
 		for (int i = 0; i < a.length; i++) {
@@ -89,9 +90,9 @@ public class sort {
 		System.out.println("Before: ");
 		app.print();
 
-//		System.out.println("After insertionSort: ");
-//		app.insertionSort();
-//		app.print();
+		System.out.println("After insertionSort: ");
+		app.insertionSort();
+		app.print();
 //
 //		System.out.println("After selectionSort: ");
 //		app.selectionSort(a);
