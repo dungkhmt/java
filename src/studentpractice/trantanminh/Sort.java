@@ -124,13 +124,77 @@ public class Sort {
             heapify(i, n);
         }
     }
+	
+	/* Arrange the array using merge sort algorithm */
+	public void mergeArray(int L, int M, int R) {
+        //Find the size of 2 sub-arrays to be merged
+        int n1 = M-L+1;
+        int n2 = R-M;
 
+        /*Create left array and right sub-array */
+        int LeftArray[] = new int[n1];
+        int RightArray[] = new int[n2];
+
+        /*Copy data to left and right sub-arrays*/
+        for (int i = 0; i < n1; i++) {
+            LeftArray[i] = a[L+i];
+        }
+        for (int i = 0; i < n2; i++) {
+            RightArray[i] = a[M+1+i];
+        }
+
+        /*Merge the left array and right array*/
+
+        //Initial indexes of left and right sub-arrays
+        int i = 0, j = 0;
+
+        //Initial index of the merged array
+        int k = L;
+
+        //Merge elements in 2 sub-arrays in ascending order
+        while (i < n1 && j < n2) {
+            if (LeftArray[i] <= RightArray[j]) {
+                a[k] = LeftArray[i];
+                i++;
+            }
+            else {
+                a[k] = RightArray[j];
+                j++;
+            }
+            k++;
+        }
+
+        //Copy remaining elements of left and right sub-array if any
+        while (i < n1) {
+            a[k] = LeftArray[i];
+            i++;
+            k++;
+        }
+        while (j < n2) {
+            a[k] = RightArray[j];
+            j++;
+            k++;
+        }
+    }
+
+    /*Merge sort function*/
+    public void mergeSort(int L, int R) {
+        if (L < R) {
+            int M = (L+R)/2;
+            mergeSort(L, M);
+            mergeSort(M+1, R);
+            mergeArray(L, M, R);
+        }
+    }
+	
     /* Main function*/
     public static void main(String[] args) {
         Sort app = new Sort();
         app.inputData("JavaLaboratoryProject/java/data/dayso.txt");
         app.heapSort(10);
         app.print();
+		app.mergeSort(0, 9);
+		app.print();
     }
 }
 
