@@ -33,7 +33,7 @@ public class LowestCommonAncestor
 	{
 		int root=0;
 		for(int i=1;i<=n;i++)
-			if(steps_inp[i]==0) root=i; /// More details :  With Directed graph , it needs number of steps in
+			if(steps_inp[i]==0) root=i; 
 		return root;
 	}
 	private void DFS(int u)
