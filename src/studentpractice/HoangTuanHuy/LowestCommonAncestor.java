@@ -64,18 +64,21 @@ public class LowestCommonAncestor
 	public int find_LCA(int x,int y)
 	{
 		for(int log=20;log>=0;log--)
-			if(dep[P[log][x]]>=dep[y]) x=P[log][x];
+			if(dep[P[log][x]]>=dep[y]) x=P[log][x]; /// find  the NEAREST ancestor of x to y
 		for(int log=20;log>=0;log--)
-			if(dep[P[log][y]]>=dep[x]) y=P[log][y];
-		for(int log=20;log>=0;log--)
+			if(dep[P[log][y]]>=dep[x]) y=P[log][y]; /// find the NEAREST ancestor of y to x
+		
+		for(int log=20;log>=0;log--)  /// Replace x, y by the lowest ancestor as much as we can
 		{
-			if(P[log][x]!=P[log][y])
+			/// Now if x == y  it's definitely not the LCA , because i've only found the 2^log common ancestor .
+			if(P[log][x]!=P[log][y])  
 			{
 				x=P[log][x];
 				y=P[log][y];
 			}
 		}
-		while(x!=y)
+		/// correct ancestor.
+		while(x!=y) /// just a few more steps
 		{
 			x=P[0][x];
 			y=P[0][y];
