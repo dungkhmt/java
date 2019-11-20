@@ -1,0 +1,111 @@
+The number of nodes is : 10
+The Lowest Common Ancestor between 1 and 1 is: 1
+The Lowest Common Ancestor between 1 and 2 is: 1
+The Lowest Common Ancestor between 1 and 3 is: 1
+The Lowest Common Ancestor between 1 and 4 is: 1
+The Lowest Common Ancestor between 1 and 5 is: 1
+The Lowest Common Ancestor between 1 and 6 is: 1
+The Lowest Common Ancestor between 1 and 7 is: 1
+The Lowest Common Ancestor between 1 and 8 is: 1
+The Lowest Common Ancestor between 1 and 9 is: 1
+The Lowest Common Ancestor between 1 and 10 is: 1
+
+The Lowest Common Ancestor between 2 and 1 is: 1
+The Lowest Common Ancestor between 2 and 2 is: 2
+The Lowest Common Ancestor between 2 and 3 is: 1
+The Lowest Common Ancestor between 2 and 4 is: 1
+The Lowest Common Ancestor between 2 and 5 is: 2
+The Lowest Common Ancestor between 2 and 6 is: 2
+The Lowest Common Ancestor between 2 and 7 is: 2
+The Lowest Common Ancestor between 2 and 8 is: 2
+The Lowest Common Ancestor between 2 and 9 is: 1
+The Lowest Common Ancestor between 2 and 10 is: 1
+
+The Lowest Common Ancestor between 3 and 1 is: 1
+The Lowest Common Ancestor between 3 and 2 is: 1
+The Lowest Common Ancestor between 3 and 3 is: 3
+The Lowest Common Ancestor between 3 and 4 is: 1
+The Lowest Common Ancestor between 3 and 5 is: 1
+The Lowest Common Ancestor between 3 and 6 is: 1
+The Lowest Common Ancestor between 3 and 7 is: 1
+The Lowest Common Ancestor between 3 and 8 is: 1
+The Lowest Common Ancestor between 3 and 9 is: 3
+The Lowest Common Ancestor between 3 and 10 is: 1
+
+The Lowest Common Ancestor between 4 and 1 is: 1
+The Lowest Common Ancestor between 4 and 2 is: 1
+The Lowest Common Ancestor between 4 and 3 is: 1
+The Lowest Common Ancestor between 4 and 4 is: 4
+The Lowest Common Ancestor between 4 and 5 is: 1
+The Lowest Common Ancestor between 4 and 6 is: 1
+The Lowest Common Ancestor between 4 and 7 is: 1
+The Lowest Common Ancestor between 4 and 8 is: 1
+The Lowest Common Ancestor between 4 and 9 is: 1
+The Lowest Common Ancestor between 4 and 10 is: 4
+
+The Lowest Common Ancestor between 5 and 1 is: 1
+The Lowest Common Ancestor between 5 and 2 is: 2
+The Lowest Common Ancestor between 5 and 3 is: 1
+The Lowest Common Ancestor between 5 and 4 is: 1
+The Lowest Common Ancestor between 5 and 5 is: 5
+The Lowest Common Ancestor between 5 and 6 is: 2
+The Lowest Common Ancestor between 5 and 7 is: 2
+The Lowest Common Ancestor between 5 and 8 is: 2
+The Lowest Common Ancestor between 5 and 9 is: 1
+The Lowest Common Ancestor between 5 and 10 is: 1
+
+The Lowest Common Ancestor between 6 and 1 is: 1
+The Lowest Common Ancestor between 6 and 2 is: 2
+The Lowest Common Ancestor between 6 and 3 is: 1
+The Lowest Common Ancestor between 6 and 4 is: 1
+The Lowest Common Ancestor between 6 and 5 is: 2
+The Lowest Common Ancestor between 6 and 6 is: 6
+The Lowest Common Ancestor between 6 and 7 is: 6
+The Lowest Common Ancestor between 6 and 8 is: 6
+The Lowest Common Ancestor between 6 and 9 is: 1
+The Lowest Common Ancestor between 6 and 10 is: 1
+
+The Lowest Common Ancestor between 7 and 1 is: 1
+The Lowest Common Ancestor between 7 and 2 is: 2
+The Lowest Common Ancestor between 7 and 3 is: 1
+The Lowest Common Ancestor between 7 and 4 is: 1
+The Lowest Common Ancestor between 7 and 5 is: 2
+The Lowest Common Ancestor between 7 and 6 is: 6
+The Lowest Common Ancestor between 7 and 7 is: 7
+The Lowest Common Ancestor between 7 and 8 is: 6
+The Lowest Common Ancestor between 7 and 9 is: 1
+The Lowest Common Ancestor between 7 and 10 is: 1
+
+The Lowest Common Ancestor between 8 and 1 is: 1
+The Lowest Common Ancestor between 8 and 2 is: 2
+The Lowest Common Ancestor between 8 and 3 is: 1
+The Lowest Common Ancestor between 8 and 4 is: 1
+The Lowest Common Ancestor between 8 and 5 is: 2
+The Lowest Common Ancestor between 8 and 6 is: 6
+The Lowest Common Ancestor between 8 and 7 is: 6
+The Lowest Common Ancestor between 8 and 8 is: 8
+The Lowest Common Ancestor between 8 and 9 is: 1
+The Lowest Common Ancestor between 8 and 10 is: 1
+
+The Lowest Common Ancestor between 9 and 1 is: 1
+The Lowest Common Ancestor between 9 and 2 is: 1
+The Lowest Common Ancestor between 9 and 3 is: 3
+The Lowest Common Ancestor between 9 and 4 is: 1
+The Lowest Common Ancestor between 9 and 5 is: 1
+The Lowest Common Ancestor between 9 and 6 is: 1
+The Lowest Common Ancestor between 9 and 7 is: 1
+The Lowest Common Ancestor between 9 and 8 is: 1
+The Lowest Common Ancestor between 9 and 9 is: 9
+The Lowest Common Ancestor between 9 and 10 is: 1
+
+The Lowest Common Ancestor between 10 and 1 is: 1
+The Lowest Common Ancestor between 10 and 2 is: 1
+The Lowest Common Ancestor between 10 and 3 is: 1
+The Lowest Common Ancestor between 10 and 4 is: 4
+The Lowest Common Ancestor between 10 and 5 is: 1
+The Lowest Common Ancestor between 10 and 6 is: 1
+The Lowest Common Ancestor between 10 and 7 is: 1
+The Lowest Common Ancestor between 10 and 8 is: 1
+The Lowest Common Ancestor between 10 and 9 is: 1
+The Lowest Common Ancestor between 10 and 10 is: 10
+
