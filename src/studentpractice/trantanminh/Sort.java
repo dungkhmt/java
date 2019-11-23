@@ -62,7 +62,7 @@ public class Sort {
         }
     }
 
-    /* Arrange the array using bubble sort algorithm*/
+    /* Arrange the array using bubble sort algorithm :)))*/
     public void bubbleSort() {
         int swapped;
         do {
