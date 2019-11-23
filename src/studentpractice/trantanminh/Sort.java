@@ -191,7 +191,7 @@ public class Sort {
     public static void main(String[] args) {
         Sort app = new Sort();
         app.inputData("JavaLaboratoryProject/java/data/dayso.txt");
-        app.heapSort(10);
+        app.heapSort(11);
         app.print();
 		app.mergeSort(0, 9);
 		app.print();
