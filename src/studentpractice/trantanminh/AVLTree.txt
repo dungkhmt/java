@@ -179,7 +179,7 @@ class AVLTree {
         tree.root = tree.insert(tree.root, 4);
         tree.root = tree.insert(tree.root, 15);
         tree.root = tree.insert(tree.root, 16);
-		/* The BST tree before constructed: 
+	/* The BST tree before constructed: 
 		        5
 		      /   \
 		     4	  10
@@ -188,8 +188,9 @@ class AVLTree {
 			 \   / \
 			  7 11  15
 				 \
-				  16	
-			
+				  16
+        */
+
         /* The constructed AVL Tree would be
               	      10
 		    /    \
