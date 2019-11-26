@@ -7,7 +7,7 @@ public class SegmentTree
 {
 	/// Manage a feature of subsequence
 	/// For example :
-	/// Given a sequence of n numbers A[1],..., A[n] , and K queries , A K-queries is a double (x,i,j), for each 
+	/// Given a sequence of n numbers A[1],..., A[n] , and K queries , A K-queries is a triple (x,i,j), for each 
 	/// k-query (1,i,j) return the maximum(minimum,....) value of subsequence A[i],...,A[j].
 	/// k-quere (2,i,j) increase value of each element in subsequence A[i] , ... , A[j] by 1.
 	/// The complexity of each k-query would be logn
