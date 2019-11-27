@@ -58,23 +58,23 @@ public class SegmentTree
 			R.lazy+=t; R.value+=t;
 			this.lazy=0;
 		}
-		public Tree enhance(int u,int v,int w) /// increase/decrease value from A[u] -> A[v] by 1
+		public void enhance(int u,int v,int w) /// increase/decrease value from A[u] -> A[v] by w
 		{
-			if(this.end<u || this.begin>u) return this; /// (u,v) is not the subsequence that THIS node manages 
+			if(this.end<u || this.begin>u) return ; /// (u,v) is not the subsequence that THIS node manages 
 			if(this.begin<=u && v<= this.end) /// THIS node includes subsequence (u,v).
 			{
 				/// Increase the value of node.
 				this.value+=w; 
 				this.lazy+=w;
-				return this;
+				return ;
 			}
 			/// Decrease the lazy of Node to 0.
 			this.down(); 
 			/// Update child of this node.
-			this.left=this.left.enhance(u,v,w); 
-			this.right=this.right.enhance(u, v, w);
+			this.left.enhance(u, v, w);
+			this.right.enhance(u, v, w);
 			this.value=(this.left.value<this.right.value) ? this.right.value:this.left.value;
-			return this;
+			return ;
 		}
 		public int get_value(int u,int v) /// Get maximum value fromt A[u] to A[v]
 		{
@@ -129,7 +129,7 @@ public class SegmentTree
 		for(int i=1;i<=k_queries;i++)
 		{
 			if(k[i].type==1) k[i].res=root.get_value(k[i].i, k[i].j);
-			else root=root.enhance(k[i].i, k[i].j, 1);
+			else root.enhance(k[i].i, k[i].j, 1);
 		}
 	}
 	public static void main(String[] args) throws IOException
