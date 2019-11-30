@@ -3,13 +3,13 @@ package studentpractice.NguyenPhiTruong;
 import java.io.File;
 import java.util.Scanner;
 
-public class BST_Word extends QuickSortStringArray {
+public class BinarySearchTree_Words extends QuickSortStringArray {
 	public static Node root;
 	private final int MAX = 500001;
 
 	public String[] words = new String[MAX];
 
-	public BST_Word() {
+	public BinarySearchTree_Words() {
 		root = null;
 	}
 
@@ -58,12 +58,12 @@ public class BST_Word extends QuickSortStringArray {
 		Scanner input = new Scanner(System.in);
 		String w = input.nextLine();
 		input.close();
-		Node p = findBST(BST_Word.root,w);
+		Node p = findBST(BinarySearchTree_Words.root,w);
 		if (p == null) System.out.print("NOT FOUND\n");
 		else System.out.print("FOUND\n");
 	}
 	public static void main(String[] args) {
-		BST_Word S = new BST_Word();
+		BinarySearchTree_Words S = new BinarySearchTree_Words();
 		S.buildBST("data\\TruongTest\\words.txt");
 		S.find();
 		
