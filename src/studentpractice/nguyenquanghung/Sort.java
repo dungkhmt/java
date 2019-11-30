@@ -98,12 +98,12 @@ public class Sort {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Sort app = new Sort();
-		app.inputData("Data\\input.txt");
+		app.inputData("data\\hungtestfile\\Sort.txt");
 		app.print();
-		//app.BubbleSort(a);
-		// app.insertionSort(a);
-		// app.selectionSort(a);
-		app.quickSort(a, 0, a.length - 1);
+		app.BubbleSort(a);
+		//app.insertionSort(a);
+		//app.selectionSort(a);
+		//app.quickSort(a, 0, a.length - 1);
 		app.print();
 	}
 
