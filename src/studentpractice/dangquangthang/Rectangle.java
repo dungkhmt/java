@@ -1,8 +1,10 @@
+package studentpractice.dangquangthang;
+
 
 public class Rectangle {
 	private int length;
 	private int width;
-    private  Rectangle sub + new Rectangle();
+    private  Rectangle sub = new Rectangle();
 
 	public Rectangle() {
 		length = 0;
