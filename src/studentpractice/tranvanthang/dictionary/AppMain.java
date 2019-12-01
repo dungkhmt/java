@@ -28,10 +28,7 @@ public class AppMain {
 	}
 	public void buidDictionary(){
 		D = new Dictionary(1000);
-		for(int i=0;i<words.length;i++){
-			D.insert(words[i]);
-			System.out.println("insert WOrds"+i+"/"+words.length);
-		}
+		D.buidDictionary(words);
 	}
 
 	public static void main(String[] args) {
@@ -44,7 +41,26 @@ public class AppMain {
 		System.out.println(app.D.find("computer"));
 		app.D.set("teacher","giaovien");
 		System.out.println(app.D.find("teacher"));
-		///////////sai o ham insert; Dictionary and BST nhe, do chua tinh index de nhet vao bst
+		while(true){
+			System.out.println("Write your command:");
+			Scanner scanner=new Scanner(System.in);
+			String line=scanner.nextLine();
+			String[] sub_word=line.split(" ");
+			String cmd=sub_word[0];
+			if(cmd.equals("find")){
+				String enWord=sub_word[1];
+				System.out.println("VN meaning of"+enWord+"is :"+app.D.find(enWord));
+			}else if(cmd.equals("set")){
+				String enWord=sub_word[1];
+				String vnMeaning=sub_word[2];
+				app.D.set(enWord, vnMeaning);
+			}else if(cmd.equals("quit")){
+				break;
+			}else{
+				System.out.println("Must be: \"find something\" or \"set enWord vnWord\" or \"quit\"");
+			}
+		}
+		
 
 	}
 

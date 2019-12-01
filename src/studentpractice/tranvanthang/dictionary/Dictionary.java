@@ -23,5 +23,15 @@ public class Dictionary {
 		int idx=h(enWord);
 		bst[idx].set(enWord, vnMeaning);
 	}
+	public void buidDictionary(String[] keys){
+		for (int i=0;i<keys.length;i++){
+			int idx=h(keys[i]);
+			bst[idx].addArray(keys[i]);
+		}
+		for (BST b: bst){
+			b.buidBST();
+			System.out.println("buid xong BST");
+		}
+	}
 	
 }
