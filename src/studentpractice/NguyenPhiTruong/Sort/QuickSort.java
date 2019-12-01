@@ -1,4 +1,4 @@
-package studentpractice.NguyenPhiTruong;
+package studentpractice.NguyenPhiTruong.Sort;
 
 public class QuickSort {
 //	public static int[] a;

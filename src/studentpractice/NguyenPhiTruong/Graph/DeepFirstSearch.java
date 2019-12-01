@@ -1,4 +1,4 @@
-package studentpractice.NguyenPhiTruong;
+package studentpractice.NguyenPhiTruong.Graph;
 
 public class DeepFirstSearch extends Graph {
 	public int sz; // So dinh

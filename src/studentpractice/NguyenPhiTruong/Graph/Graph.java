@@ -1,4 +1,4 @@
-package studentpractice.NguyenPhiTruong;
+package studentpractice.NguyenPhiTruong.Graph;
 import java.util.Scanner;
 import java.io.File;
 public class Graph {
