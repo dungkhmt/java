@@ -48,24 +48,29 @@ public class HashTable {
 	}
 
 	public void find() {
-		String word;
-		Scanner input = new Scanner(System.in);
-		word = input.nextLine();
-		input.close();
-		int key = cal(word);
-		boolean check = Dictionary.containsKey(key);
-		if (check == false)
-			System.out.print("NOT FOUND THIS WORDD");
-		else {
-			LinkedList<Word> W = Dictionary.get(key);
-			for (Word i : W) {
-				if (word.equalsIgnoreCase(i.en)) {
-					System.out.print("FOUND");
-					return;
+		while (true) {
+			String word;
+			Scanner input = new Scanner(System.in);
+			word = input.nextLine();
+			input.close();
+			if (word.equalsIgnoreCase("quit"))
+				return;
+			int key = cal(word);
+			boolean check = Dictionary.containsKey(key);
+			if (check == false)
+				System.out.print("NOT FOUND THIS WORDD");
+			else {
+				LinkedList<Word> W = Dictionary.get(key);
+				for (Word i : W) {
+					if (word.equalsIgnoreCase(i.en)) {
+						System.out.print("FOUND");
+						return;
+					}
 				}
+				System.out.print("NOT FOUND THIS WORD");
 			}
-			System.out.print("NOT FOUND THIS WORD");
 		}
+
 	}
 
 	public static void main(String[] args) {
