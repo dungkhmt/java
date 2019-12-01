@@ -24,4 +24,13 @@ public class Dictionary {
 		int idx = h(enWord);
 		bst[idx].insert(enWord);
 	}
+	public void buildDictionary(String[] keys){
+		for(int i = 0; i <  keys.length; i++){
+			int idx = h(keys[i]);
+			bst[idx].push_back(keys[i]);
+		}
+		for(BST b: bst){
+			b.buildBST();
+		}
+	}
 }
