@@ -1,4 +1,4 @@
-package studentpractice.NguyenPhiTruong;
+package studentpractice.NguyenPhiTruong.BST_Hashtable;
 
 public class Word {
 	public String en;

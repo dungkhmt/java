@@ -1,4 +1,4 @@
-package studentpractice.NguyenPhiTruong;
+package studentpractice.NguyenPhiTruong.Sort;
 
 public class MergeSort {
 	public void mergeSort(int[] a,int L, int R) {

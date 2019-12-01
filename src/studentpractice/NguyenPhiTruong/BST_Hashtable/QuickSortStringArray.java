@@ -1,4 +1,4 @@
-package studentpractice.NguyenPhiTruong;
+package studentpractice.NguyenPhiTruong.BST_Hashtable;
 
 public class QuickSortStringArray {
 	public void swap(String[] a, int i, int j) {
