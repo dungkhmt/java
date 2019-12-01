@@ -1,6 +1,6 @@
-package studentpractice.nguyenthitham;
+package studentpractice.nguyenthitham.dictionary;
 
-public class Banhxe {
+public class Dictionary {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
