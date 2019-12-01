@@ -23,4 +23,14 @@ public class BST {
 		if(p == null) return;
 		p.setVnMeaning(vnMeaning); 
 	}
+	private Node insert(Node r, String enWord){
+		if(r == null) return new Node(enWord);
+		int c = r.getEnWord().compareTo(enWord);
+		if(c < 0) r.setRightChild(insert(r.getRightChild(),enWord));
+		else r.setLeftChild(insert(r.getLeftChild(),enWord));
+		return r; 
+	}
+	public void insert(String enWord){
+		root = insert(root,enWord);
+	}
 }
