@@ -24,7 +24,7 @@ public class rectangle {
         r1.print();
         r2.print();
         r1.sizex2();
-        r1.print();
+        r1.sizex2();
 	}
 
 }
