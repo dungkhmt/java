@@ -44,6 +44,7 @@ public class BinarySearchTree_Words extends QuickSortStringArray {
 		}
 		quickSort(words, 0, tmp - 1);
 		root = insert(0,tmp-1);
+		System.out.print(tmp);
 	}
 	
 	public Node findBST(Node r,String w) {
