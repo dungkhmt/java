@@ -59,7 +59,7 @@ public class HashTable {
 		else {
 			LinkedList<Word> W = Dictionary.get(key);
 			for (Word i : W) {
-				if (i.en == word) {
+				if (word.equalsIgnoreCase(i.en)) {
 					System.out.print("FOUND");
 					return;
 				}
