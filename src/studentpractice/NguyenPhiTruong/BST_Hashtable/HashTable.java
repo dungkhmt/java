@@ -1,4 +1,4 @@
-package studentpractice.NguyenPhiTruong;
+package studentpractice.NguyenPhiTruong.BST_Hashtable;
 
 import java.io.File;
 import java.util.Scanner;
@@ -9,7 +9,7 @@ import java.util.LinkedList;
 public class HashTable {
 	public static Hashtable<Integer, LinkedList<Word>> Dictionary = new Hashtable<Integer, LinkedList<Word>>();
 
-	public void addToDic(int key, String w) {
+	private void addToDic(int key, String w) {
 		if (Dictionary.containsKey(key) == false) {
 			LinkedList<Word> W = new LinkedList<Word>();
 			Word word = new Word(w);
@@ -24,7 +24,7 @@ public class HashTable {
 		}
 	}
 
-	public int cal(String word) { // them tu moi vao hashtable
+	private int cal(String word) { // them tu moi vao hashtable
 		double sum = 0;
 		for (int i = 0; i < word.length(); i++) {
 			sum = sum + ((int) (word.charAt(i))) * (Math.pow(10, word.length() - i - 1));
@@ -33,7 +33,7 @@ public class HashTable {
 		return key;
 	}
 
-	public void build(String filename) {
+	private void build(String filename) {
 		try {
 			Scanner input = new Scanner(new File(filename));
 			while (input.hasNextLine()) {
@@ -48,28 +48,34 @@ public class HashTable {
 	}
 
 	public void find() {
-		String word;
-		Scanner input = new Scanner(System.in);
-		word = input.nextLine();
-		input.close();
-		int key = cal(word);
-		boolean check = Dictionary.containsKey(key);
-		if (check == false)
-			System.out.print("NOT FOUND THIS WORDD");
-		else {
-			LinkedList<Word> W = Dictionary.get(key);
-			for (Word i : W) {
-				if (i.en == word) {
-					System.out.print("FOUND");
-					return;
+		while (true) {
+			String word;
+			Scanner input = new Scanner(System.in);
+			word = input.nextLine();
+			input.close();
+			if (word.equalsIgnoreCase("quit"))
+				return;
+			int key = cal(word);
+			boolean check = Dictionary.containsKey(key);
+			if (check == false)
+				System.out.print("NOT FOUND THIS WORDD");
+			else {
+				LinkedList<Word> W = Dictionary.get(key);
+				for (Word i : W) {
+					if (word.equalsIgnoreCase(i.en)) {
+						System.out.print("FOUND");
+						return;
+					}
 				}
+				System.out.print("NOT FOUND THIS WORD");
 			}
-			System.out.print("NOT FOUND THIS WORD");
 		}
+
 	}
 
 	public static void main(String[] args) {
 		HashTable S = new HashTable();
+		
 		S.build("data\\TruongTest\\words.txt");
 		S.find();
 	}
