@@ -10,7 +10,7 @@ public class Dictionary {
 		
 	}
 	private int h(String key){
-		return key.hashCode()%bst.length;
+		return Math.abs(key.hashCode()) %bst.length;
 	}
 	public String find(String enWord){
 		int idx = h(enWord);
@@ -20,5 +20,17 @@ public class Dictionary {
 		int idx = h(enWord);
 		bst[idx].set(enWord, vnMeaning);
 	}
-	
+	public void insert(String enWord){
+		int idx = h(enWord);
+		bst[idx].insert(enWord);
+	}
+	public void buildDictionary(String[] keys){
+		for(int i = 0; i <  keys.length; i++){
+			int idx = h(keys[i]);
+			bst[idx].push_back(keys[i]);
+		}
+		for(BST b: bst){
+			b.buildBST();
+		}
+	}
 }
