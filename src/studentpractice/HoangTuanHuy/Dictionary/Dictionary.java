@@ -43,7 +43,7 @@ public class Dictionary
 			int idx=hash(enwords[i]);
 			bst_words[idx].add(enwords[i]);
 		}
-		for(int i=0;i<bst.length;i++) insert_bst(i,0,bst_words.length);
+		for(int i=0;i<bst.length;i++) insert_bst(i,0,bst_words.length-1);
 	}
 	public void insert(String enword)
 	{
