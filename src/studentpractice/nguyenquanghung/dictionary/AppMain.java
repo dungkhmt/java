@@ -53,7 +53,7 @@ public class AppMain {
 		//System.out.println(app.D.find("a"));
 		while (true) {
 			Scanner scanner = new Scanner(System.in);
-			System.out.print("Enter the command: ");
+			System.out.print("Enter the command (find/set/quit): ");
 			String cmd = scanner.nextLine();
 			if (cmd.equals("find")==true) {
 				System.out.println("Enter the word: ");
