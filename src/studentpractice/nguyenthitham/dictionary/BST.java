@@ -4,7 +4,7 @@ public class BST {
 	private Node root;
 	
 	public BST(){
-		
+		root=null;
 	}
 	
 	private Node find(Node r, String enWord){
@@ -24,5 +24,16 @@ public class BST {
 		Node p=find(root, enWord);
 		if(p==null) return;
 		p.setVnMeaning(vnMeaning);
+	}
+	private Node insert(Node r, String enWord){
+		if(r==null) return new Node(enWord);
+		int c=r.getEnWord().compareTo(enWord);
+		if(c<0) r.setRightChild(insert(r.getRightChild(), enWord));
+		else r.setLeftChild(insert(r.getLeftChild(), enWord));
+		return r;
+		
+	}
+	public void insert(String enWord){
+		root= insert(root, enWord);
 	}
 }
