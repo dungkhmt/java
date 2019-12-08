@@ -28,4 +28,17 @@ public class BST
 		if(p==null) return;
 		p.setVnmeaning(vnmeaning);
 	}
+	private Node insert(Node r, String enword)
+	{
+		if(r==null) return new Node(enword);
+		int c= r.getEnword().compareTo(enword);
+		if(c<0) r.setRight(insert(r.getRight(),enword));
+		else r.setLeft(insert(r.getLeft(),enword));
+		return r;
+		
+	}
+	public void insert(String enword)
+	{
+		root= insert(root,enword);
+	}
 }

@@ -1,0 +1,89 @@
+import java.util.Scanner;
+
+public class StringDemo {
+    public static int checkDigit(char a[]) {
+        int cnt = 0;
+        for (int i = 0; i < a.length; i++) {
+            if (!Character.isDigit(a[i])) {
+                cnt++; break;
+            }
+        }
+        return cnt == 0 ? 1 : 0;
+    }
+    public static int checkPassword(char b[]) {
+        int charCount = 0;
+        int numCount = 0;
+        int specialCount = 0;
+
+        for (int i = 0; i < b.length; i++) {
+            if (is_Numeric(b[i])) numCount++;
+            if (is_Letter(b[i])) charCount++;
+            if (is_special(b[i])) specialCount++;
+        }
+        return numCount > 0 && charCount > 0 && specialCount > 0 ? 1 : 0;
+    }
+    public static boolean is_Letter(char ch) {
+        ch = Character.toUpperCase(ch);
+        return (ch >= 'A' && ch <= 'Z');
+    }
+    public static boolean is_Numeric(char ch) {
+        return (ch >= '0' && ch <= '9');
+    }
+    public static boolean is_special(char ch) {
+        return (ch >= '!' && ch <= '*' || ch == '@');
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        /*Full name*/
+        System.out.println("Enter your full name: ");
+        String name = sc.nextLine();
+        name = name.trim();
+        name = name.replaceAll("\\s+", " ");
+        char c[] = name.toCharArray();
+        c[0] = Character.toUpperCase(c[0]);
+        for (int i = 1; i < c.length; i++) {
+            if (Character.isSpaceChar(c[i-1])) c[i] = Character.toUpperCase(c[i]);
+        }
+        String name1 = "";
+        for (int i = 0; i < c.length; i++) {
+            name1 += c[i];
+        }
+        System.out.println("Your full name is: " + name1);
+
+         /*Email address*/
+        System.out.println("Enter your email address: ");
+        String email = sc.nextLine();
+        email = email.replaceAll("\\s+", "");
+        email = email.trim();
+        while (email.length() == 10 || !email.endsWith("@gmail.com")) {
+            System.out.println("Please enter right format of the email address: ");
+            email = sc.nextLine();
+            email = email.replaceAll("\\s+", "");
+            email = email.trim();
+        }
+        System.out.println("Your email address is: " + email);
+
+        /*Phone*/
+        System.out.println("Enter your mobile phone number: ");
+        String phone = sc.nextLine();
+        char a[] = phone.toCharArray();
+        while (checkDigit(a) == 0 || phone.length() != 10 || (!phone.startsWith("09") && !phone.startsWith("03"))) {
+            System.out.println("Please enter right format of the mobile phone number: ");
+            phone = sc.nextLine();
+            a = phone.toCharArray();
+        }
+
+         /*Password*/
+        System.out.println("Enter your password: ");
+        String pass = sc.nextLine();
+        char b[] = pass.toCharArray();
+        while (checkPassword(b) == 0) {
+            System.out.println("Please enter right format of the password: ");
+            pass = sc.nextLine();
+            b = pass.toCharArray();
+        }
+    }
+}
+
+
