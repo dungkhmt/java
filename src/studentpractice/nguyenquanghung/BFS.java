@@ -62,7 +62,7 @@ public class BFS {
 		q.add(u);
 		color[u] = false;
 		while (!q.isEmpty()) {
-			int v = q.poll();
+			int v = q.remove();
 			for (int i = 0; i < adj[v].size(); i++) {
 				int x = adj[v].get(i);
 				if (color[x] == true) {

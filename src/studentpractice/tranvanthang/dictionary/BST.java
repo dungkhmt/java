@@ -1,10 +1,13 @@
 package studentpractice.tranvanthang.dictionary;
 
+import java.util.ArrayList;
+
 public class BST {
 	private Node root;
-
+	private ArrayList<String> list_word;
 	public BST() {
 		root=null;
+		list_word=new ArrayList<String>();
 	}
 
 	private Node find(Node r, String enWord) {
@@ -43,5 +46,20 @@ public class BST {
 		if (p == null)
 			return;
 		p.setVnMeaning(vnWord);
+	}
+	public void addArray(String key){
+		list_word.add(key);
+	}
+	public void buidBST(){
+		root=buidBST(0,list_word.size()-1);
+	}
+	private Node buidBST(int left,int right){
+		if(left>right) return null;
+		int mid=(left+right)/2;
+		Node r=new Node(list_word.get(mid));
+		r.setLeftChid(buidBST(left,mid-1));
+		r.setRightChild(buidBST(mid+1,right));
+		return r;
+
 	}
 }
