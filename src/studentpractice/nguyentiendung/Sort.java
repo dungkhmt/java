@@ -195,10 +195,26 @@ public class Sort {
 		}
 		System.out.print("-");
 	}
-
-	   	   
-
-
+	/*public void heapify(int i, int N) {
+		int L=2*i;
+		int R=2*i+1;
+		int max=i;
+		if(a[L]>a[i]&&L<=N) max=L;
+		if(a[R]>a[i]&&R<=N) max=R;
+		heapify(max,N);
+	}
+	public void buildHeap(int N) {
+		for(int i=N/2; i>=1;i--) {
+			heapify(i,N);
+		}
+	}
+	public void heapSort(int N) {
+		buildHeap(N);
+		for(int i=N;i>1;i--) {
+			swap(a, 1,i);
+			heapify(1,i-1);
+		}
+	}*/
 	public static void main(String[] args) {
 		Sort app = new Sort();
 		app.inputData("data\\dayso.txt");
@@ -209,7 +225,7 @@ public class Sort {
 		app.print();
 		app.bubbleSort();
 		app.print();*/
-		app.quicksort(a,0, 4);
+		app.quicksort(a, 0, 4);
 		app.print();
 	}
 

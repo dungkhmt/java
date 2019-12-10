@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.ArrayList;
 public class BFS 
 {
-	Graph T;
-	Queue <Node> qu = new LinkedList<>();
+	private Graph T;
+	private Queue <Node> qu = new LinkedList<>();
 	private HashMap<Node,Integer> d = new HashMap<>();
 	private HashMap<Node,Node> Trace = new HashMap<>();
 	public BFS(Graph T)
