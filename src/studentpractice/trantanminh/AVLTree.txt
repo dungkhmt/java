@@ -25,12 +25,22 @@ class AVLTree {
     }
 
     // A utility function to right rotate subtree rooted with y
+<<<<<<< HEAD
+    /*   	y                               x
+               / \     Right Rotation          / \
+       	      x   T3   - - - - - - - >        T1  y 
+      	     / \                     	 	 / \
+     	    T1  T2     			       T2   T3
+    */
+
+=======
     /*   y                               x
         / \     Right Rotation          / \
        x   T3   - - - - - - - >        T1  y 
       / \                     		  	  / \
      T1  T2     			            T2   T3
     */
+>>>>>>> 23f7aca7dedbbd50b2a75883ec4f502c72b1d24b
 	Node rightRotate(Node y) {
         Node x = y.left;
         Node T2 = x.right;
@@ -50,9 +60,15 @@ class AVLTree {
     // A utility function to left rotate subtree rooted with x
     /*   	 x                               y
 		/ \     Left Rotation           / \
+<<<<<<< HEAD
+	       T1  y    - - - - - - - >        x   T3 
+	      	  / \            	 	   / \
+	    	T2   T3 			 T1   T2 
+=======
 	   T1  y    - - - - - - - >        x   T3 
 	      / \            			  / \
 	    T2   T3 			        T1   T2 
+>>>>>>> 23f7aca7dedbbd50b2a75883ec4f502c72b1d24b
     */
 	Node leftRotate(Node x) {
         Node y = x.right;
@@ -106,8 +122,8 @@ class AVLTree {
 		  y   T4      Right Rotate (z)          x     z
 		 / \          - - - - - - - - ->      /  \   /  \ 
 		x   T3                               T1  T2 T3  T4
-	   / \
-	 T1   T2												*/
+	       / \
+	     T1   T2												*/
         if (balance > 1 && key < node.left.key)
             return rightRotate(node);
 

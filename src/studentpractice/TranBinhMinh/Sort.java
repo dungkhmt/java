@@ -3,7 +3,7 @@ package studentpractice.TranBinhMinh;
 import java.io.*;
 import java.util.Scanner;
 
-public class sort {
+public class Sort {
 	private int[] a;
 	private int n;
 	public void inputData(String filename) {
@@ -165,7 +165,7 @@ public class sort {
 		System.out.println();
 	}
 	public static void main(String[] Args) {
-		sort app = new sort();
+		Sort app = new Sort();
 		app.inputData("data/Sequence.txt");
 		app.heapsort();
 		app.print();

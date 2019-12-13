@@ -37,6 +37,7 @@ public class Sort
 		for(int i=1;i<=n;i++) my_print.print(a[i]+" ");
 		//my_print.close();
 	}
+
 	private void swap(int i,int j)
 	{
 		int tg=a[i];
