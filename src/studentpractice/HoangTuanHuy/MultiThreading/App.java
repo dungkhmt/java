@@ -20,7 +20,7 @@ public class App
 			}
 			System.out.println("Continue creating ID");
 			ID++;
-			ThreadDemo next_thread = new ThreadDemo(ID);
+			Thread next_thread = new Thread( new ThreadDemo(ID));
 			next_thread.start();
 		}
 	}

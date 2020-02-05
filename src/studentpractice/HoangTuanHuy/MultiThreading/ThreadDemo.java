@@ -30,7 +30,7 @@ public class ThreadDemo implements Runnable
 		System.out.println("Your ID : " + ID);
 		t.suspend();
 	}
-	public void start()
+	/*public void start()
 	{
 		System.out.println("Prepare to creat your ID");
 		if(t==null)
@@ -38,5 +38,5 @@ public class ThreadDemo implements Runnable
 			t=new Thread(this);
 			t.run();
 		}
-	}
+	}*/
 }
