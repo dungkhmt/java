@@ -35,8 +35,8 @@ public class BFS {
 		G.print();
 		
 		BFS app = new BFS(G);
-		Node s = G.getNodeById(6);
-		Node t = G.getNodeById(7);
+		Node s = G.getNodeById(7);
+		Node t = G.getNodeById(5);
 		app.findPath(s, t);
 	}
 
