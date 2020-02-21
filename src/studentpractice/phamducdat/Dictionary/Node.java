@@ -1,11 +1,10 @@
-package studentpractice.phamducdat.Dictionay;
+package studentpractice.phamducdat.Dictionary;
 
 public class Node {
 	private String enWord;
 	private String vnMeaning;
-	private Node LeftChild;
-	private Node RightChild;
-	
+	private Node leftChild;
+	private Node rightChild;
 	public String getEnWord() {
 		return enWord;
 	}
@@ -19,31 +18,24 @@ public class Node {
 		this.vnMeaning = vnMeaning;
 	}
 	public Node getLeftChild() {
-		return LeftChild;
+		return leftChild;
 	}
 	public void setLeftChild(Node leftChild) {
-		LeftChild = leftChild;
+		this.leftChild = leftChild;
 	}
 	public Node getRightChild() {
-		return RightChild;
+		return rightChild;
 	}
 	public void setRightChild(Node rightChild) {
-		RightChild = rightChild;
+		this.rightChild = rightChild;
 	}
-	public Node(String enWord, String vnMeaning, Node leftChild, Node rightChild) {
+	public Node(String enWord) {
 		super();
 		this.enWord = enWord;
-		this.vnMeaning = vnMeaning;
-		LeftChild = leftChild;
-		RightChild = rightChild;
+		this.vnMeaning = null;
+		this.leftChild = null;
+		this.rightChild = null;
 	}
-	public Node(String enWord) 
-	{
-		this.enWord=enWord;
-		this.vnMeaning=null;
-		this.LeftChild=null;
-		this.RightChild=null;
-	}
-
+	
 
 }
