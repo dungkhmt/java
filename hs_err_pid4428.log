@@ -1,0 +1,267 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32756 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:272), pid=4428, tid=0x00002044
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_211-b12) (build 1.8.0_211-b12)
+# Java VM: Java HotSpot(TM) Client VM (25.211-b12 mixed mode windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x1406d800):  VMThread [stack: 0x14350000,0x143a0000] [id=8260]
+
+Stack: [0x14350000,0x143a0000],  sp=0x1439ee5c,  free space=315k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1ae2eb]
+V  [jvm.dll+0x1a67f8]
+V  [jvm.dll+0x8dd21]
+V  [jvm.dll+0x8defd]
+V  [jvm.dll+0x8e397]
+V  [jvm.dll+0xa5ed4]
+V  [jvm.dll+0x182a96]
+V  [jvm.dll+0x11a30f]
+V  [jvm.dll+0x11a8b4]
+V  [jvm.dll+0x1141a3]
+V  [jvm.dll+0x1842d1]
+V  [jvm.dll+0x1846e7]
+V  [jvm.dll+0x1848e2]
+V  [jvm.dll+0x1c6a96]
+C  [msvcr100.dll+0x5c556]
+C  [msvcr100.dll+0x5c600]
+C  [kernel32.dll+0x51174]
+C  [ntdll.dll+0x5b3f5]
+C  [ntdll.dll+0x5b3c8]
+
+VM_Operation (0x1491f71c): GetOwnedMonitorInfo, mode: safepoint, requested by thread 0x140b6800
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x1420a000 JavaThread "Service Thread" daemon [_thread_blocked, id=5088, stack(0x14ab0000,0x14b00000)]
+  0x14148c00 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=6732, stack(0x017e0000,0x01830000)]
+  0x140b9c00 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=4756, stack(0x14400000,0x14450000)]
+  0x140b8800 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=5388, stack(0x149b0000,0x14a00000)]
+  0x140b6800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=6332, stack(0x148d0000,0x14920000)]
+  0x140a8c00 JavaThread "Attach Listener" daemon [_thread_blocked, id=6920, stack(0x14580000,0x145d0000)]
+  0x140b0800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=7328, stack(0x14600000,0x14650000)]
+  0x1409b000 JavaThread "Finalizer" daemon [_thread_blocked, id=5852, stack(0x144d0000,0x14520000)]
+  0x14076400 JavaThread "Reference Handler" daemon [_thread_blocked, id=5332, stack(0x14450000,0x144a0000)]
+  0x0165d400 JavaThread "main" [_thread_blocked, id=8356, stack(0x01600000,0x01650000)]
+
+Other Threads:
+=>0x1406d800 VMThread [stack: 0x14350000,0x143a0000] [id=8260]
+  0x14151800 WatcherThread [stack: 0x146c0000,0x14710000] [id=7752]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0165b7f8] Threads_lock - owner thread: 0x1406d800
+
+OutOfMemory and StackOverflow Exception counts:
+StackOverflowErrors=4
+
+Heap:
+ def new generation   total 4928K, used 1620K [0x03c00000, 0x04150000, 0x09150000)
+  eden space 4416K,  25% used [0x03c00000, 0x03d15090, 0x04050000)
+  from space 512K, 100% used [0x04050000, 0x040d0000, 0x040d0000)
+  to   space 512K,   0% used [0x040d0000, 0x040d0000, 0x04150000)
+ tenured generation   total 10944K, used 913K [0x09150000, 0x09c00000, 0x13c00000)
+   the space 10944K,   8% used [0x09150000, 0x09234608, 0x09234800, 0x09c00000)
+ Metaspace       used 3672K, capacity 3698K, committed 3776K, reserved 4480K
+
+Card table byte_map: [0x03b50000,0x03be0000] byte_map_base: 0x03b32000
+
+Polling page: 0x01060000
+
+CodeCache: size=32768Kb used=1021Kb max_used=1021Kb free=31746Kb
+ bounds [0x01b50000, 0x01c50000, 0x03b50000]
+ total_blobs=321 nmethods=176 adapters=84
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 2194.993 Thread 0x14148c00  172             org.eclipse.jdt.launching.internal.org.objectweb.asm.SymbolTable::addConstantUtf8Reference (101 bytes)
+Event: 2194.994 Thread 0x14148c00 nmethod 172 0x01c4dbc8 code [0x01c4dd20, 0x01c4df98]
+Event: 2811.404 Thread 0x14148c00  173             org.eclipse.jdt.launching.internal.org.objectweb.asm.SymbolTable::addConstantMemberReference (147 bytes)
+Event: 2811.405 Thread 0x14148c00 nmethod 173 0x01c4e2c8 code [0x01c4e460, 0x01c4e804]
+Event: 2931.082 Thread 0x14148c00  174             org.eclipse.jdt.launching.internal.org.objectweb.asm.ByteVector::put12 (64 bytes)
+Event: 2931.083 Thread 0x14148c00 nmethod 174 0x01c4ee08 code [0x01c4ef10, 0x01c4f03c]
+Event: 2984.347 Thread 0x14148c00  175             org.eclipse.jdt.launching.internal.org.objectweb.asm.ClassReader::readUTF8 (23 bytes)
+Event: 2984.347 Thread 0x14148c00 nmethod 175 0x01c4f188 code [0x01c4f290, 0x01c4f3ac]
+Event: 2984.347 Thread 0x14148c00  176             org.eclipse.jdt.launching.internal.org.objectweb.asm.SymbolTable::addConstantClass (8 bytes)
+Event: 2984.347 Thread 0x14148c00 nmethod 176 0x01c4f508 code [0x01c4f600, 0x01c4f6ac]
+
+GC Heap History (4 events):
+Event: 1.146 GC heap before
+{Heap before GC invocations=0 (full 0):
+ def new generation   total 4928K, used 4416K [0x03c00000, 0x04150000, 0x09150000)
+  eden space 4416K, 100% used [0x03c00000, 0x04050000, 0x04050000)
+  from space 512K,   0% used [0x04050000, 0x04050000, 0x040d0000)
+  to   space 512K,   0% used [0x040d0000, 0x040d0000, 0x04150000)
+ tenured generation   total 10944K, used 0K [0x09150000, 0x09c00000, 0x13c00000)
+   the space 10944K,   0% used [0x09150000, 0x09150000, 0x09150200, 0x09c00000)
+ Metaspace       used 3101K, capacity 3154K, committed 3264K, reserved 4480K
+Event: 1.151 GC heap after
+Heap after GC invocations=1 (full 0):
+ def new generation   total 4928K, used 512K [0x03c00000, 0x04150000, 0x09150000)
+  eden space 4416K,   0% used [0x03c00000, 0x03c00000, 0x04050000)
+  from space 512K, 100% used [0x040d0000, 0x04150000, 0x04150000)
+  to   space 512K,   0% used [0x04050000, 0x04050000, 0x040d0000)
+ tenured generation   total 10944K, used 397K [0x09150000, 0x09c00000, 0x13c00000)
+   the space 10944K,   3% used [0x09150000, 0x091b34b8, 0x091b3600, 0x09c00000)
+ Metaspace       used 3101K, capacity 3154K, committed 3264K, reserved 4480K
+}
+Event: 1.381 GC heap before
+{Heap before GC invocations=1 (full 0):
+ def new generation   total 4928K, used 4928K [0x03c00000, 0x04150000, 0x09150000)
+  eden space 4416K, 100% used [0x03c00000, 0x04050000, 0x04050000)
+  from space 512K, 100% used [0x040d0000, 0x04150000, 0x04150000)
+  to   space 512K,   0% used [0x04050000, 0x04050000, 0x040d0000)
+ tenured generation   total 10944K, used 397K [0x09150000, 0x09c00000, 0x13c00000)
+   the space 10944K,   3% used [0x09150000, 0x091b34b8, 0x091b3600, 0x09c00000)
+ Metaspace       used 3603K, capacity 3634K, committed 3648K, reserved 4480K
+Event: 1.389 GC heap after
+Heap after GC invocations=2 (full 0):
+ def new generation   total 4928K, used 512K [0x03c00000, 0x04150000, 0x09150000)
+  eden space 4416K,   0% used [0x03c00000, 0x03c00000, 0x04050000)
+  from space 512K, 100% used [0x04050000, 0x040d0000, 0x040d0000)
+  to   space 512K,   0% used [0x040d0000, 0x040d0000, 0x04150000)
+ tenured generation   total 10944K, used 913K [0x09150000, 0x09c00000, 0x13c00000)
+   the space 10944K,   8% used [0x09150000, 0x09234608, 0x09234800, 0x09c00000)
+ Metaspace       used 3603K, capacity 3634K, committed 3648K, reserved 4480K
+}
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (3 events):
+Event: 1344.392 Thread 0x1406d800 redefined class name=studentpractice.phamducdat.MaxflowNetwork.BFSGN, count=1
+Event: 1344.392 Thread 0x1406d800 redefined class name=studentpractice.phamducdat.MaxflowNetwork.AppMain, count=1
+Event: 1452.566 Thread 0x1406d800 redefined class name=studentpractice.phamducdat.MaxflowNetwork.BFSGN, count=2
+
+Internal exceptions (10 events):
+Event: 0.085 Thread 0x0165d400 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x03c07178) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u211\12973\hotspot\src\share\vm\prims\jni.cpp
+Event: 1.179 Thread 0x0165d400 Exception <a 'java/security/PrivilegedActionException'> (0x03c5fac0) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u211\12973\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 1.180 Thread 0x0165d400 Exception <a 'java/security/PrivilegedActionException'> (0x03c5fea0) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u211\12973\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 1.182 Thread 0x0165d400 Exception <a 'java/security/PrivilegedActionException'> (0x03c63288) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u211\12973\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 1.182 Thread 0x0165d400 Exception <a 'java/security/PrivilegedActionException'> (0x03c63668) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u211\12973\hotspot\src\share\vm\prims\jvm.cpp, line 1502]
+Event: 1.389 Thread 0x0165d400 StackOverflowError at 0x01c350c0
+Event: 1.409 Thread 0x0165d400 Exception <a 'java/lang/StackOverflowError'> (0x03c06ba0) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u211\12973\hotspot\src\share\vm\runtime\javaCalls.cpp, line 386]
+Event: 1.409 Thread 0x0165d400 Exception <a 'java/lang/StackOverflowError'> (0x03c0a980) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u211\12973\hotspot\src\share\vm\runtime\javaCalls.cpp, line 386]
+Event: 1.419 Thread 0x0165d400 Exception <a 'java/lang/StackOverflowError'> (0x03c02e30) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u211\12973\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 1.422 Thread 0x0165d400 Exception <a 'java/lang/StackOverflowError'> (0x03c0e7c0) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u211\12973\hotspot\src\share\vm\runtime\javaCalls.cpp, line 386]
+
+Events (10 events):
+Event: 3356.062 Executing VM operation: GetOwnedMonitorInfo done
+Event: 3356.062 Executing VM operation: GetCurrentContendedMonitor
+Event: 3356.063 Executing VM operation: GetCurrentContendedMonitor done
+Event: 3789.373 Executing VM operation: GetCurrentContendedMonitor
+Event: 3789.434 Executing VM operation: GetCurrentContendedMonitor done
+Event: 3789.434 Executing VM operation: GetOwnedMonitorInfo
+Event: 3789.436 Executing VM operation: GetOwnedMonitorInfo done
+Event: 3790.800 Executing VM operation: GetCurrentContendedMonitor
+Event: 3790.823 Executing VM operation: GetCurrentContendedMonitor done
+Event: 3790.824 Executing VM operation: GetOwnedMonitorInfo
+
+
+Dynamic libraries:
+0x01160000 - 0x01193000 	C:\Program Files\Java\dat\bin\javaw.exe
+0x77cd0000 - 0x77e0c000 	C:\Windows\SYSTEM32\ntdll.dll
+0x77430000 - 0x77504000 	C:\Windows\system32\kernel32.dll
+0x760d0000 - 0x7611a000 	C:\Windows\system32\KERNELBASE.dll
+0x770d0000 - 0x77170000 	C:\Windows\system32\ADVAPI32.dll
+0x77330000 - 0x773dc000 	C:\Windows\system32\msvcrt.dll
+0x77eb0000 - 0x77ec9000 	C:\Windows\SYSTEM32\sechost.dll
+0x763d0000 - 0x76471000 	C:\Windows\system32\RPCRT4.dll
+0x77670000 - 0x77739000 	C:\Windows\system32\USER32.dll
+0x77a30000 - 0x77a7e000 	C:\Windows\system32\GDI32.dll
+0x77a20000 - 0x77a2a000 	C:\Windows\system32\LPK.dll
+0x76120000 - 0x761bd000 	C:\Windows\system32\USP10.dll
+0x74ac0000 - 0x74c5e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16385_none_421189da2b7fabfc\COMCTL32.dll
+0x761c0000 - 0x76217000 	C:\Windows\system32\SHLWAPI.dll
+0x77170000 - 0x7718f000 	C:\Windows\system32\IMM32.DLL
+0x77740000 - 0x7780c000 	C:\Windows\system32\MSCTF.dll
+0x67f20000 - 0x67fdf000 	C:\Program Files\Java\dat\bin\msvcr100.dll
+0x69b40000 - 0x69f15000 	C:\Program Files\Java\dat\bin\client\jvm.dll
+0x737f0000 - 0x737f7000 	C:\Windows\system32\WSOCK32.dll
+0x76220000 - 0x76255000 	C:\Windows\system32\WS2_32.dll
+0x763c0000 - 0x763c6000 	C:\Windows\system32\NSI.dll
+0x70740000 - 0x70772000 	C:\Windows\system32\WINMM.dll
+0x75320000 - 0x75329000 	C:\Windows\system32\VERSION.dll
+0x77ea0000 - 0x77ea5000 	C:\Windows\system32\PSAPI.DLL
+0x737e0000 - 0x737ec000 	C:\Program Files\Java\dat\bin\verify.dll
+0x736e0000 - 0x73701000 	C:\Program Files\Java\dat\bin\java.dll
+0x6c2a0000 - 0x6c2cb000 	C:\Program Files\Java\dat\bin\jdwp.dll
+0x73710000 - 0x73717000 	C:\Program Files\Java\dat\bin\npt.dll
+0x72f20000 - 0x72f40000 	C:\Program Files\Java\dat\bin\instrument.dll
+0x736c0000 - 0x736d4000 	C:\Program Files\Java\dat\bin\zip.dll
+0x76480000 - 0x770c9000 	C:\Windows\system32\SHELL32.dll
+0x76260000 - 0x763bc000 	C:\Windows\system32\ole32.dll
+0x75e20000 - 0x75e2b000 	C:\Windows\system32\profapi.dll
+0x73670000 - 0x73678000 	C:\Program Files\Java\dat\bin\dt_socket.dll
+0x74890000 - 0x748a0000 	C:\Windows\system32\NLAapi.dll
+0x75890000 - 0x758cc000 	C:\Windows\System32\mswsock.dll
+0x75750000 - 0x75794000 	C:\Windows\system32\DNSAPI.dll
+0x6c6d0000 - 0x6c6d8000 	C:\Windows\System32\winrnr.dll
+0x6c6c0000 - 0x6c6d0000 	C:\Windows\system32\napinsp.dll
+0x6c6a0000 - 0x6c6b2000 	C:\Windows\system32\pnrpnsp.dll
+0x72d70000 - 0x72d8c000 	C:\Windows\system32\IPHLPAPI.DLL
+0x72d60000 - 0x72d67000 	C:\Windows\system32\WINNSI.DLL
+0x72b00000 - 0x72b38000 	C:\Windows\System32\fwpuclnt.dll
+0x72300000 - 0x72306000 	C:\Windows\system32\rasadhlp.dll
+0x753b0000 - 0x753b5000 	C:\Windows\System32\wshtcpip.dll
+0x736a0000 - 0x736b5000 	C:\Program Files\Java\dat\bin\net.dll
+0x77b90000 - 0x77cc5000 	C:\Windows\system32\urlmon.dll
+0x77a80000 - 0x77b0f000 	C:\Windows\system32\OLEAUT32.dll
+0x75f20000 - 0x7603c000 	C:\Windows\system32\CRYPT32.dll
+0x75e90000 - 0x75e9c000 	C:\Windows\system32\MSASN1.dll
+0x77820000 - 0x77a19000 	C:\Windows\system32\iertutil.dll
+0x75880000 - 0x75886000 	C:\Windows\System32\wship6.dll
+0x737d0000 - 0x737df000 	C:\Program Files\Java\dat\bin\nio.dll
+0x6fd10000 - 0x6fdfb000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:49693 -javaagent:D:\Desktop\Eclipse-Classic-32bit-4-9-32-bit\eclipse\configuration\org.eclipse.osgi\174\0\.cp\lib\javaagent-shaded.jar -Dfile.encoding=Cp1252 
+java_command: studentpractice.phamducdat.MaxflowNetwork.AppMain
+java_class_path (initial): D:\LEARN\My_Java\java\bin;D:\Desktop\Eclipse-Classic-32bit-4-9-32-bit\eclipse\configuration\org.eclipse.osgi\174\0\.cp\lib\javaagent-shaded.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\dat
+PATH=C:/Program Files/Java/dat/bin/client;C:/Program Files/Java/dat/bin;C:/Program Files/Java/dat/lib/i386;C:\Program Files\Java\dat\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;D:\Desktop\Eclipse-Classic-32bit-4-9-32-bit\eclipse;
+USERNAME=Admin
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 37 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7600 (6.1.7600.16385)
+
+CPU:total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, popcnt, tsc, tscinvbit
+
+Memory: 4k page, physical 1825600k(214516k free), swap 7302400k(5124k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.211-b12) for windows-x86 JRE (1.8.0_211-b12), built on Apr  1 2019 20:53:53 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Mon Feb 24 04:57:37 2020
+timezone: SE Asia Standard Time
+elapsed time: 3791 seconds (0d 1h 3m 11s)
+

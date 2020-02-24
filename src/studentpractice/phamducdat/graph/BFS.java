@@ -47,12 +47,12 @@ public class BFS {
 	
 	public static void main(String[] args) {
 		Graph G = new Graph();
-		G.loadData("src/studentpractice/phamquangdung/graph.txt");
+		G.loadData("src/studentpractice/phamducdat/data/graph4.txt");
 		G.print();
 		
 		BFS b = new BFS(G);
-		Node u = G.getNodebyId(7);
-		Node v = G.getNodebyId(6);
+		Node u = G.getNodebyId(1);
+		Node v = G.getNodebyId(7);
 		b.findPath(u, v);
 		b.pint(u, v);
 	}

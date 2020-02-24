@@ -60,7 +60,7 @@ public class Dijkstra {
 
 	public static void main(String[] args) {
 		Graph G = new Graph();
-		G.loadData("data\\TruongTest\\Graph.txt");
+		G.loadData("src/studentpractice/phamducdat/data/graph3.txt");
 		G.print();
 
 		System.out.println();
