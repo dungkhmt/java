@@ -49,7 +49,7 @@ public class AppMain {
 			String cmd=sub_word[0];
 			if(cmd.equals("find")){
 				String enWord=sub_word[1];
-				System.out.println("VN meaning of"+enWord+"is :"+app.D.find(enWord));
+				System.out.println("VN meaning of"+enWord+" is :"+app.D.find(enWord));
 			}else if(cmd.equals("set")){
 				String enWord=sub_word[1];
 				String vnMeaning=sub_word[2];

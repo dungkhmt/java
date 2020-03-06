@@ -108,7 +108,7 @@ public class Sort {
 	      
 	}  
 	  
-	  
+	  //////lay phan tu dau ,sau do tim vi tri phan tu dau
 	private static int getMiddle(int[] list, int low, int high) {  
 	    int tmp = list[low];    
 	    while (low < high) {  

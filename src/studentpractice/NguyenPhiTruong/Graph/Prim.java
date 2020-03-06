@@ -70,6 +70,6 @@ public class Prim {
 	
 	public static void main(String[] args) {
 		Prim P = new Prim();
-		P.start("data\\TruongTest\\DirectedGraph2");
+		P.start("data\\TruongTest\\ScalarGraph");
 	}
 }
