@@ -1,4 +1,4 @@
-package exercises;
+package studentpractice.phamvanhai;
 
 public class BST {	
 	public class Node {

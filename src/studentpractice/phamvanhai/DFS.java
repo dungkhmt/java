@@ -1,4 +1,4 @@
-package bfs_dfs;
+package studentpractice.phamvanhai;
 
 import java.util.Scanner;
 

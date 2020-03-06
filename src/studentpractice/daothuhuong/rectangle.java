@@ -22,7 +22,7 @@ public class rectangle {
 		rectangle r2 =new rectangle(5,6);
 		r1.print();
 		r2.print();
-		r1
+		
 
 	}
 }

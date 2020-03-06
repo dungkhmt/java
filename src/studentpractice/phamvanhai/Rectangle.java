@@ -1,3 +1,5 @@
+package studentpractice.phamvanhai;
+
 
 public class Rectangle {
 	private int length;

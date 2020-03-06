@@ -14,7 +14,7 @@ public class Oto {
 		for(int i = 0; i < 2; i++)
 			cua[i] = new Cua(3,7);
 		
-		int c = cua[0].dai + cua[1].dai;
+		
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

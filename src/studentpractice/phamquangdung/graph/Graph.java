@@ -15,7 +15,7 @@ public class Graph {
 	}
 	public ArrayList<Arc> getAdjacent(Node u){
 		return A.get(u);
-	} 
+	}  
 	public void loadData(String filename){
 		try{
 			Scanner in = new Scanner(new File(filename));
