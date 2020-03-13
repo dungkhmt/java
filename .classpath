@@ -2,5 +2,9 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/mongodb-driver-3.12.0.jar"/>
+	<classpathentry kind="lib" path="lib/bson-3.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/jsoup-1.12.1.jar"/>
+	<classpathentry kind="lib" path="lib/postgresql-9.3-1101.jdbc4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

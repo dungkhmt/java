@@ -17,8 +17,7 @@ public class TestJDBCPostgresConnector {
 			System.out.println("Java JDBC PostgreSQL Example");
 			System.out.println("Connected to PostgreSQL database!");
 			Statement statement = connection.createStatement();
-			System.out.println("Reading car records...");
-			System.out.printf("%-30.30s  %-30.30s%n", "Model", "Price");
+			
 			ResultSet rs = statement
 					.executeQuery("SELECT * FROM public.party");
 			while (rs.next()) {
