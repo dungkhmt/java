@@ -15,7 +15,7 @@ public class AppMain {
 			//Document doc = Jsoup.connect("http://en.wikipedia.org/").get();
 			//Document doc = Jsoup.connect("https://www.mckinsey.com/industries/electric-power-and-natural-gas/our-insights/the-future-of-natural-gas-in-north-america?cid=other-eml-alt-mip-mck&hlkid=f887cea4797541729afb41b1fd412735&hctky=11733486&hdpid=fa38edd9-ca10-40ac-85a8-80ddc01e5227").get();
 			Document doc = Jsoup.connect("https://www.worldometers.info/coronavirus/").get();
-			PrintWriter out = new PrintWriter("crawl-output.txt");
+			PrintWriter out = new PrintWriter("output/crawl-output.txt");
 			out.println(doc.text());
 			
 			System.out.println(doc.body().text());
