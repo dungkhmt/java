@@ -44,7 +44,7 @@ public class BFS
 	}
 	
 	private Queue<Integer> qu = new LinkedList<>();
-	private void BFS(int start)
+	private void BFS(int start)
 	{
 		qu.add(start);
 		p[start]=start;
