@@ -8,7 +8,8 @@ public class MagicSquare {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n = 3;
+		int n = 8;
+		long a=System.currentTimeMillis();
 		int magicSum = n * (n * n + 1) / 2;
 		Model m = new Model();
 		IntVar[][] var = new IntVar[n][n];
@@ -68,6 +69,8 @@ public class MagicSquare {
 			}
 			System.out.println();
 		}
+		long b=System.currentTimeMillis();
+		System.out.println("time run:  "+ (b-a)/100+ "  x100ms");
 	}
 
 }
