@@ -26,7 +26,7 @@ public class Appmain {
 		}
 	}
 	public void buildDictionary() {
-		D = new Dictionary(1000);
+		D = new Dictionary(1001);
 		for(int i = 0; i < words.length; i++)
 			D.insert(words[i]);
 	}
